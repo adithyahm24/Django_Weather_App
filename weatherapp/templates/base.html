@@ -26,9 +26,10 @@
       
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    <form action ="{% url 'home' %}" class="form-inline my-2 my-lg-0" method="POST">
+        {% csrf_token %}
+      <input class="form-control mr-sm-2" type="search" placeholder="Enter place" aria-label="Search" name="search_place">
+      <button type="button" class="btn btn-success"> Find </button> 
     </form>
   </div>
 </nav>
