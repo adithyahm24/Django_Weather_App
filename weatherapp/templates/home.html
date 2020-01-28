@@ -11,10 +11,16 @@
       <button type="button" class="btn btn-success"> Find </button> 
     </form><br/>
     {% if api == "Error..." %}
-        There is an error in statement
+        
+        <div class="jumbotron">
+            <h1><u><b>{{ place }}</b></u> - Not Found</h1><br/>
+            <h5>Name not found or There is an error in spelling <br/>Try again.... </h5>
+          
+        </div>
+
     {% else %}
         <div class="jumbotron">
-            <h1><u><b>{{ place }}</b></u></h1><br/>
+            <h1><b>{{ place }},{{ api_con }}</b></h1><br/>
             <h1 class="display-4">Present State : <b>{{desc}}</b></h1><br/>
             <p class="lead">Current Temperature :<b> {{temp}}°C</b></p>
           
