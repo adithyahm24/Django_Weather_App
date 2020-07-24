@@ -14,7 +14,7 @@ def home(request):
     
     if request.method=="POST":
         searched=request.POST['search_place']
-        api_data=requests.get("http://api.openweathermap.org/data/2.5/weather?appid=a185a52bbf6978435705812a2e32c64c&q="+searched)
+        api_data=requests.get("http://api.openweathermap.org/data/2.5/weather?appid=ENTER_YOUR_API_KEY_HERE="+searched)
         try:
             api=api_data.json()
             api_place=api['name']
