@@ -29,7 +29,7 @@ def home(request):
             return render(request,'home.html',{'api':api,'place':searched})        
         return render(request,'home.html',{'api':api,'place':api_place,'temp':api_temp,'desc':api_desc,'api_con':api_con})
     else:
-        api_data=requests.get("http://api.openweathermap.org/data/2.5/weather?appid=a185a52bbf6978435705812a2e32c64c&q=Bangalore")
+        api_data=requests.get("http://api.openweathermap.org/data/2.5/weather?appid=ENTER_YOUR_API_KEY_HERE&q=Bangalore")
         try:
             api=api_data.json()
             api_place=api['name']
